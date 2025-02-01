@@ -19,7 +19,6 @@ const App: Component = () => {
 
   return (
     <div class="w-full p-20 min-w-xl">
-      <header class="text-4xl mb-10">voten</header>
 
       <div id="timer-bar" class="flex justify-end py-10">
         <span class="text-4xl border-2 p-4 rounded-2xl border-emerald-600 ">

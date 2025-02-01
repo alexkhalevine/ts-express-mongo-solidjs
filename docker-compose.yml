@@ -1,7 +1,6 @@
 services:
   mongo:
     image: mongo:8.0 
-    container_name: voter-mongodb
     restart: always
     ports:
       - "27017:27017" # Expose MongoDB on the default port
@@ -12,10 +11,9 @@ services:
       - mongo-data:/data/db # Persist MongoDB data
       - mongo-config:/data/configdb # Persist MongoDB configuration
   server:
-    container_name: voter-express-server
     build: ./server
     ports:
-      - "3000:3000"
+      - "4000:4000"
     volumes:
       - ./server:/app  # Bind source code for live reload
       - /app/node_modules  # Prevent overwriting node_modules
